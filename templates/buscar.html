@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Buscar Medicamento</h2>
+
+<form method="POST">
+    <input type="text" name="medicamento" placeholder="Digite o nome do medicamento" required>
+    <button>Buscar</button>
+</form>
+
+{% if resultado %}
+    {% if "Não encontrado" in resultado %}
+        <div class="resultado erro">{{ resultado }}</div>
+    {% else %}
+        <div class="resultado">{{ resultado }}</div>
+    {% endif %}
+{% endif %}
+{% endblock %}

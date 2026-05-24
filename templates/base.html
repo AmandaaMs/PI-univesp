@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Gestão de Estoque MDS</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #eef2f7;
+}
+
+/* topo */
+.header {
+    background: #12cf87;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* container estilo app */
+.app {
+    max-width: 400px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* botões */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #0cad78;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0cad78;
+}
+
+/* resultado */
+.resultado {
+    margin-top: 15px;
+    padding: 10px;
+    background: #d4edda;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* erro */
+.erro {
+    background: #f8d7da;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">Gestão de Estoque MDS</div>
+
+<div class="app">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

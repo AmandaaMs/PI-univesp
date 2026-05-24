@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Estoque de Medicamentos</h2>
+
+<canvas id="grafico"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const nomes = [{% for m in meds %}"{{ m.nome }}",{% endfor %}];
+const quantidades = [{% for m in meds %}{{ m.quantidade }},{% endfor %}];
+
+new Chart(document.getElementById('grafico'), {
+    type: 'bar',
+    data: {
+        labels: nomes,
+        datasets: [{
+            label: 'Quantidade',
+            data: quantidades
+        }]
+    }
+});
+</script>
+
+{% endblock %}
